@@ -1,10 +1,12 @@
 import { SIZES } from "../../constants/sizes";
 
-export enum ButtonType {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  TERTIARY = "tertiary"
-}
+export const ButtonType = {
+  PRIMARY: "primary",
+  SECONDARY: "secondary",
+  TERTIARY: "tertiary"
+} as const;
+
+export type ButtonTypes = (typeof ButtonType)[keyof typeof ButtonType];
 
 export enum ButtonColor {
   PRIMARY = "primary",

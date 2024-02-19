@@ -7,7 +7,15 @@ import useMergeRef from "../../hooks/useMergeRef";
 import { NOOP } from "../../utils/function-utils";
 import Icon from "../../components/Icon/Icon";
 import Loader from "../../components/Loader/Loader";
-import { BUTTON_ICON_SIZE, ButtonColor, ButtonInputType, ButtonType, getActualSize, Size } from "./ButtonConstants";
+import {
+  BUTTON_ICON_SIZE,
+  ButtonColor,
+  ButtonInputType,
+  ButtonType,
+  ButtonTypes,
+  getActualSize,
+  Size
+} from "./ButtonConstants";
 import { getParentBackgroundColorNotTransparent, TRANSPARENT_COLOR } from "./helper/dom-helpers";
 import { getTestId } from "../../tests/test-ids-utils";
 import { SubIcon, VibeComponent, VibeComponentProps, withStaticProps } from "../../types";
@@ -23,7 +31,7 @@ export interface ButtonProps extends VibeComponentProps {
   className?: string;
   activeButtonClassName?: string;
   /** The button's kind */
-  kind?: ButtonType;
+  kind?: ButtonTypes;
   /** Callback function to run when the button is clicked */
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   onMouseDown?: (event: React.MouseEvent<HTMLButtonElement>) => void;
