@@ -35,7 +35,7 @@ jobs:
           branch: gh-pages
           target-folder: storybook-blocks
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.VIBE_GITHUB_TOKEN }}
       - name: Push core Storybook to Github Pages
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
@@ -43,4 +43,4 @@ jobs:
           folder: packages/core/static_storybook
           branch: gh-pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.VIBE_GITHUB_TOKEN }}
